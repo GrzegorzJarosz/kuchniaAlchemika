@@ -1,0 +1,56 @@
+
+     <div class="">
+         <h1 class="intro">Witaj na stronie!</h1>
+     </div>
+     <div class="" layout="row" layout-xs="column" >
+         <div class="" flex layout-padding  layout-align="center center" layout="column">
+            <span><md-icon md-font-icon="md-48" class="md-48" md-svg-icon="magnify"></md-icon></span>
+            <h4>Znajduj przepisy</h4>
+         </div>
+         <div class="" flex layout-padding layout-align="center center" layout="column" >
+            <span><md-icon md-font-icon="md-48" class="md-48" md-svg-icon="tag"></md-icon></span>
+            <h4>Twórz i zarządzaj własnymi przepisami</h4>
+         </div>
+         <div class="" flex layout-padding  layout-align="center center" layout="column">
+            <span><md-icon md-font-icon="md-48" class="md-48" md-svg-icon="silverware"></md-icon></span>
+            <h4>Ciesz się z gotowania</h4>
+         </div>
+     </div>
+
+<!--searching-->
+<div class="home-panel" layout-padding layout-margin layout="column"  layout-align="center none">
+   <div class="search-panel" layout-padding >
+      <div class="">
+         <p class="banner-title">Znajdź swój przepis!</p>
+      </div>
+      <div>
+         <form class="" ng-submit="searchRecipe()">
+            <md-content class="md-no-momentum search-rad">
+               <md-input-container md-no-float class="md-block no-margin ">
+                 <input ng-model="searchQuery" type="text" placeholder="Wyszukaj przepis" >
+                 <md-icon md-svg-icon="magnify" style="display:inline-block;" ng-click="searchRecipe()" class="search-but"></md-icon>
+               </md-input-container>
+             </md-content>
+         </form>
+      </div>
+   </div>
+</div>
+
+<div class="" ><!--start-->
+
+   <div  flex ng-cloak ng-if="recipes">
+      <p>znaleziono {{ile}} wyników</p>
+     <md-grid-list md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4"  md-row-height="6:3"  md-gutter="8px" md-gutter-gt-sm="4px" >
+        <md-grid-tile class="md-whiteframe-3dp" ng-repeat="recipe in recipes" md-rowspan="1" md-colspan="1"  >
+          <img  ng-src="{{recipe.imgUrl}}" alt="obraz">
+          <a href="#!/recipes/details/{{recipe._id}}">
+         <md-grid-tile-footer>
+            <h3>{{recipe.title}}</h3>
+            <h4>{{recipe.description}}</h4>
+         </md-grid-tile-footer>
+      </a>
+       </md-grid-tile>
+     </md-grid-list>
+   </div>
+
+</div><!--end-->

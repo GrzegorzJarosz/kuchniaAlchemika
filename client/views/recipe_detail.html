@@ -1,0 +1,40 @@
+
+<div class="" ng-init="getRecipe()">
+   <div layout="row" layout-xs="column" class="md-whiteframe-4dp detail-show" >
+     <div flex-gt-xs="33" flex-gt-md="40"class="">
+       <div class="detail-img-show">
+         <img ng-src="{{recipe.imgUrl}}" class="" alt="img">
+       </div>
+     </div>
+     <div flex-gt-xs flex-gt-xs class="">
+       <div class="detail-title-show">
+          <h2>{{recipe.title}}</h2>
+          <p>{{recipe.description}}</p>
+          <md-divider></md-divider>
+          <p class="subdetail">kategoria: {{recipe.category}}</p>
+          <div layout="row" layout-align="end end">
+             <md-button ng-href="#!/recipes/edit/{{recipe._id}}" class="md-primary md-raised">Edytuj</md-button>
+   <!--          <md-button class="md-accent md-raised" ng-click="removeRecipe(recipe._id)">Usuń</md-button>  -->
+   <md-button class="md-accent md-raised" ng-click="showConfirm($event, recipe._id)">Usuń</md-button>
+
+          </div>
+       </div>
+     </div>
+   </div>
+   <div layout="row" layout-xs="column" class="md-whiteframe-4dp detail-show-rec">
+     <div flex-gt-xs="33" flex-gt-md="40"class="">
+       <div class="detail-ingr-instr">
+         <h3>Składniki:</h3>
+         <md-divider></md-divider>
+         <div class="" ng-repeat="ingr in recipe.ingredients">
+            <p>{{ingr.quantity}} {{ingr.unit}} {{ingr.name}}</p>
+         </div>
+       </div>
+     </div>
+     <div flex-gt-xs flex-gt-xs class="detail-ingr-instr">
+        <h3>Wykonanie:</h3>
+        <md-divider></md-divider>
+        <p class="detail-instr">{{recipe.instruction}}</p>
+     </div>
+   </div>
+</div>

@@ -1,0 +1,198 @@
+/******************mixins************************/
+/*************************************************/
+* {
+  box-sizing: border-box; }
+
+input, textarea, button, select {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  padding: 3px 10px; }
+
+.detail-instr {
+  white-space: pre-wrap; }
+
+.kk {
+  border: 2px solid red; }
+
+.mynav-title {
+  text-transform: uppercase;
+  margin: 12px;
+  font-weight: bold; }
+
+.opt-menu {
+  margin: 5px; }
+
+.home-panel {
+  background: url("../img/bcgr.jpeg") no-repeat;
+  background-size: 100%;
+  height: 300px; }
+  @media (max-width: 600px) {
+    .home-panel {
+      height: 150px; } }
+  .home-panel .no-margin {
+    margin: 0px; }
+  .home-panel .search-rad {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    opacity: 0.8; }
+  .home-panel input {
+    opacity: 1; }
+  .home-panel .md-errors-spacer {
+    display: none; }
+
+footer {
+  border-top: 1px solid #ccc;
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 10px; }
+  footer md-list-item.md-no-proxy {
+    padding-left: 0px; }
+
+md-list-item > md-icon:first-child:not(.md-avatar-icon) {
+  margin-right: 5px; }
+
+/*****************************************/
+.menu-add a, .menu-add a:active, .menu-add a:hover, .menu-add a:visited {
+  color: inherit;
+  text-decoration: none; }
+
+.menu-add a:active, .menu-add a:hover {
+  color: blue; }
+
+.opt-menu md-menu-item {
+  min-height: 22px;
+  height: 9px; }
+
+.banner-title {
+  color: #f2f2f2;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px black,1px 1px 10px black;
+  margin: 0px;
+  font-size: 25px;
+  font-weight: bold; }
+
+/****************************/
+.detail-img-show {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; }
+  .detail-img-show img {
+    top: 50%;
+    bottom: 0px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    position: absolute;
+    opacity: 1; }
+
+.detail-title-show {
+  padding: 10px; }
+  .detail-title-show h2 {
+    text-transform: uppercase; }
+  .detail-title-show .subdetail {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7); }
+
+.detail-show-rec {
+  margin-top: 10px; }
+
+.detail-ingr-instr {
+  padding: 0px 10px 10px 10px; }
+
+.detail-instr {
+  line-height: 32px; }
+
+/**************************************************************/
+figure {
+  position: relative;
+  overflow: hidden; }
+  figure img {
+    left: 0px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100%;
+    bottom: 0px; }
+
+md-grid-tile-footer figcaption {
+  width: 100%; }
+  md-grid-tile-footer figcaption h3, md-grid-tile-footer figcaption h4 {
+    width: 93%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-shadow: 0px 0px 4px #000; }
+
+md-grid-list md-grid-tile md-grid-tile-footer {
+  height: 68px;
+  background: rgba(0, 0, 0, 0.3); }
+  md-grid-list md-grid-tile md-grid-tile-footer:hover {
+    background: rgba(0, 0, 0, 0.5); }
+
+/**********search**button***********************************************/
+.search-but {
+  cursor: pointer; }
+
+/*********togg** menu***********************************************/
+.togg-menu {
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: absolute;
+  padding: 15px;
+  font-size: 14px; }
+
+.show-togg {
+  -webkit-transform: translateY(-200px);
+  -moz-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  transform: translateY(-200px);
+  opacity: 0; }
+
+.dod-lnk:visited p {
+  text-decoration: none; }
+
+md-nav-bar .md-button._md-nav-button.md-unselected {
+  color: rgba(0, 0, 0, 0.65); }
+
+/******************main*title*recipes*****************************/
+.myhead-title {
+  padding: 1px 10px;
+  margin-bottom: 10px; }
+  .myhead-title h2 {
+    color: rgba(0, 0, 0, 0.7); }
+
+/*add recipes -- new input*/
+.myMargin {
+  margin-bottom: 17px; }
+
+/*intro**site**icons*/
+.md-48 {
+  font-size: 44px;
+  color: #2F619A;
+  height: 68px; }
+
+/*intro-site*/
+.intro {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7); }
+
+.about {
+  padding: 15px; }
+  .about .hd {
+    text-align: center; }

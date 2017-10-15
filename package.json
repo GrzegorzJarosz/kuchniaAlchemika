@@ -1,0 +1,17 @@
+{
+  "name": "cook",
+  "version": "1.0.0",
+  "description": "cook serv",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies":{
+     "express":"*",
+     "body-parser":"*",
+     "mongoose":"*",
+     "cors":"*"
+ },
+  "author": "",
+  "license": "ISC"
+}

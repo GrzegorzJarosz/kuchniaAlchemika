@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+   <head>
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <meta charset="utf-8">
+      <title>Kuchnia Alchemika</title>
+
+      <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+      <link rel="stylesheet" href="/css/style.css">
+      <!-- <base href="/"> -->
+   </head>
+
+   <body ng-cloak >
+
+      <div layout="column" ng-controller="RecipesController">
+         <div flex>
+            <md-toolbar class="md-whiteframe-5dp">
+
+                  <div layout="row" layout-align="center end" >
+                    <div flex-gt-xs="none" flex >
+
+                       <p class="mynav-title"> <md-icon  md-svg-icon="silverware"></md-icon>  Kuchnia Alchemika</p>
+                    </div>
+
+                    <div hide show-gt-xs flex>
+                       <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" >
+                          <md-nav-item md-nav-href="#!" name="home">Home</md-nav-item>
+                          <md-nav-item md-nav-href="#!recipes" name="recipes">Przepisy</md-nav-item>
+                       </md-nav-bar>
+                    </div>
+
+
+                    <div hide-gt-xs flex="nogrow">
+                        <md-menu md-position-mode="target-right target">
+                  <!--        <md-button aria-label="Menu" class="md-icon-button" ng-click="$mdMenu.open()" style="margin-bottom:5px;">  -->
+                              <md-button aria-label="Menu" class="md-icon-button" ng-click="showme()" style="margin-bottom:5px;">
+                             <md-icon  md-svg-icon="menu">
+                             </md-icon>
+                          </md-button>
+                          <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                             <md-menu-item class="menu-add">
+                                <a href="#!">Home</a>
+                             </md-menu-item>
+                             <md-menu-item class="menu-add">
+                                <a href="#!/recipes">Przepisy</a>
+                             </md-menu-item>
+                          </md-menu-content>
+                       </md-menu>
+                    </div>
+
+                    <div flex="nogrow" class="opt-menu">
+                       <md-menu md-position-mode="target-right target">
+                          <md-button aria-label="Dots-vertical" class="md-icon-button" ng-click="$mdMenu.open()">
+                             <md-icon  md-svg-icon="dots-vertical">
+                             </md-icon>
+                          </md-button>
+                          <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                             <md-menu-item class="menu-add">
+                                <a href="#!/recipes/add">dodaj nowy przepis</a>
+                             </md-menu-item>
+                          </md-menu-content>
+                       </md-menu>
+                    </div>
+                 </div>
+           </md-toolbar>
+         </div>
+
+
+        <div flex >
+           <md-toolbar hide-gt-xs layout="column" class="menu-add togg-menu" ng-class="{'show-togg' : showMeAdMenu}" >
+              <a  href="#!" ng-click="showme()">
+                 <p>HOME</p>
+              </a>
+              <a href="#!/recipes" ng-click="showme()">
+                 <p>RECIPES</p>
+              </a>
+           </md-toolbar>
+        </div>
+
+     </div >
+
+
+
+<!--view-->
+      <div layout="column" layout-padding class="">
+        <div flex>
+           <div ng-view></div>
+        </div>
+
+
+      </div>
+
+
+<!--footer-->
+      <footer class="md-whiteframe-5dp">
+          <div layout="row" layout-align="center start">
+              <div flex-gt-sm="15" flex="33" layout="column" layout-align="start start">
+                 <h4>Kuchnia Alchemika</h4>
+
+                 <md-list flex  class="menu-add">
+                    <a href="/#!/about">
+                       <md-list-item class="">
+                         <md-icon md-svg-icon="library"></md-icon><p>about</p>
+                       </md-list-item>
+                    </a>
+                 </md-list >
+
+              </div>
+
+              <div flex-gt-sm="15" flex="33"layout="column" layout-align="start start">
+                 <h4>Kontakt</h4>
+                 <md-list flex class="menu-add">
+                    <a href="">
+                       <md-list-item class="">
+                        <md-icon md-svg-icon="email-outline"></md-icon><p>napisz do nas</p>
+                      </md-list-item>
+                    </a>
+
+                 </md-list >
+              </div>
+              <div flex-gt-sm="15" flex="33"layout="column" layout-align="start start">
+                 <h4>Znajdź nas na:</h4>
+                    <md-list flex class="menu-add">
+                       <a ng-href='https://www.facebook.com/'>
+                          <md-list-item class="">
+                            <md-icon md-svg-icon="facebook-box"></md-icon><p>facebook</p>
+                         </md-list-item>
+                       </a>
+
+
+                        <a ng-href='https://twitter.com'>
+                          <md-list-item class="">
+                             <md-icon md-svg-icon="twitter"></md-icon><p>twitter</p>
+                          </md-list-item>
+                       </a>
+                       <a ng-href='https://www.tumblr.com/'>
+                          <md-list-item class="">
+                             <md-icon md-svg-icon="tumblr"></md-icon><p>tumblr</p>
+                          </md-list-item>
+                       </a>
+                     </md-list >
+
+
+
+              </div>
+          </div>
+      </footer>
+
+      <script src="/bower_components/angular/angular.min.js"></script>
+      <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+      <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+      <script src="/bower_components/angular-material/angular-material.js"></script>
+      <script src="/bower_components/angular-route/angular-route.min.js"></script>
+
+      <script src="/app.js"></script>
+      <script src="/controllers/recipes.js"></script>
+
+   </body>
+</html>
