@@ -1,7 +1,6 @@
 var myApp = angular.module("myApp", ["ngRoute", "ngMaterial"]);
 
-myApp.config(function($routeProvider/* , $locationProvider*/,$mdIconProvider) {
-   //$locationProvider.html5Mode(true);
+myApp.config(function($routeProvider,$mdIconProvider) {
   $routeProvider
   .when('/', {
     controller:'RecipesController',

@@ -12,7 +12,6 @@ $scope.showme=function(scope){
 $scope.showMeAdMenu=!$scope.showMeAdMenu;
 }
 
-//
 $scope.showConfirm = function(ev, nn) {
 
     var confirm = $mdDialog.confirm()
@@ -145,8 +144,6 @@ myApp.directive("addbuttons", function($compile){
 			scope.count++;
 			angular.element(document.getElementById('add-area'))
          .append($compile(
-            //"<div class=\"myMargin\"  layout-xs=\"column\" ><label >skladnik "+(scope.count+1)+" </label><input flex-xs type=\"text\" placeholder=\"name\" ng-model=\"recipe.ingredients["+scope.count+"].name\"><input flex-xs type=\"number\" placeholder=\"quantity\" ng-model=\"recipe.ingredients["+scope.count+"].quantity\"><select flex-xs ng-model=\"recipe.ingredients["+scope.count+"].unit\"><option value=\"g\">g</option><option value=\"kg\">kg</option><option value=\"ml\">ml</option><option value=\"l\">l</option><option value=\"łyż\">łyż</option><option value=\"Łyż\">Łyż</option><option value=\"szkl\">szkl</option><option value=\"szt\">szt</option></select></div>")(scope));
-
             "<div layout=\"column\" layout-gt-xs=\"row\"><md-input-container class=\"md-block\" flex=\"64\" flex-gt-xs=\"60\"><label>Nazwa składnika "+(scope.count+1)+"</label><input type=\"text\" ng-model=\"recipe.ingredients["+scope.count+"].name\" required></md-input-container><md-input-container class=\"md-block\" flex=\"18\" flex-gt-xs=\"20\"><label>Ilość</label><input type=\"number\" ng-model=\"recipe.ingredients["+scope.count+"].quantity\" required></md-input-container><md-input-container class=\"md-block\" flex=\"18\" flex-gt-xs=\"20\"><label>Jednostka</label><md-select ng-model=\"recipe.ingredients["+scope.count+"].unit\" required><md-option value=\"g\">g</md-option><md-option value=\"kg\">kg</md-option><md-option value=\"ml\">ml</md-option><md-option value=\"l\">l</md-option><md-option value=\"łyż\">łyż</md-option><md-option value=\"Łyż\">Łyż</md-option><md-option value=\"szkl\">szkl</md-option><md-option value=\"szt\">szt</md-option><md-option value=\"opak\">opak</md-option></md-select></md-input-container></div>")(scope));
 
 		});

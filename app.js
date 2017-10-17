@@ -118,11 +118,6 @@ app.post('/api/recipes',(req,res)=>{
       });
    });
 
-/*
-app.get('*', (req,res) => {
-  res.sendFile(path.join(__dirname,'public/index.html'));
-});
-*/
 
 //start server
 app.listen(port, ()=>{

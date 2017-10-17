@@ -28,8 +28,6 @@ module.exports.addRecipe= function(recipe, callback){
 }
 //search recipes
 module.exports.searchRecipe=function(name,callback){
-   //Recipe.find({'title':name},callback);
-   //Recipe.find({'title': { $regex: /name/, $options:'i'} },callback);
    Recipe.find({'title': new RegExp(name,"i") },callback);
 
 }

@@ -3,49 +3,39 @@
    <div class="md-whiteframe-5dp" layout-padding flex="100" flex-gt-xs="90" flex-gt-sm="70" flex-gt-md="50">
       <form name="myForm" novalidate>
          <md-content layout="column" layout-padding>
-
                <div><h2>Dodaj swój przepis</h2></div>
                <md-divider></md-divider>
                <md-input-container class="md-block">
                  <label>Tytuł</label>
                  <input type="text" ng-model="recipe.title" required>
                </md-input-container>
-
                <md-input-container>
                  <label>Opis</label>
                  <input type="text" ng-model="recipe.description" required>
                </md-input-container>
-
                <md-input-container>
                   <label>Kategoria</label>
                   <input type="text" ng-model="recipe.category" required>
                </md-input-container>
-
                <md-input-container>
                   <label>URL obrazka</label>
                   <input type="text" ng-model="recipe.imgUrl" required>
                </md-input-container>
-
-
                <md-input-container class="md-block">
                   <label>Instrukcje:</label>
                   <textarea ng-model="recipe.instruction" rows="5" md-select-on-focus></textarea>
                </md-input-container>
-
                <p>Składniki:</p>
-
                <div layout-padding>
                   <div layout="column" layout-gt-xs="row">
                      <md-input-container class="md-block" flex="64" flex-gt-xs="60">
                         <label>Nazwa składnika 1</label>
                         <input type="text" ng-model="recipe.ingredients[0].name" required>
                      </md-input-container>
-
                      <md-input-container class="md-block" flex="18" flex-gt-xs="20">
                         <label>Ilość</label>
                         <input type="number" ng-model="recipe.ingredients[0].quantity" required>
                      </md-input-container>
-
                      <md-input-container class="md-block" flex="18" flex-gt-xs="20">
                         <label>Jednostka</label>
                         <md-select ng-model="recipe.ingredients[0].unit" required>
@@ -61,20 +51,14 @@
                         </md-select>
                      </md-input-container>
                   </div>
-
-
                   <div id="add-area"></div>
-
                </div>
-
                <div>
                   <md-button addbuttons class="md-primary md-raised">dodaj kolejny składnik</md-button>
                </div>
-
                <div>
                   <md-button  class="md-accent md-raised"ng-disabled="myForm.$invalid" ng-click="addRecipe()">zapisz</md-button>
                </div>
-
             </md-content>
       </form>
        </div>
